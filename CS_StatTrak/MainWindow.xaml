@@ -1,0 +1,77 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CS_StatTrak"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="CS_StatTrak.MainWindow"
+        mc:Ignorable="d"
+        Title="CS_StatTrak (Min)" Height="1080" Width="1920" 
+        WindowStyle="ThreeDBorderWindow" Icon="/Icon/pantone.png">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Operation" Margin="-2,-2,-104,0" Background="BlueViolet">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="18*"/>
+                        <ColumnDefinition Width="301*"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </TabItem>
+            <TabItem Header="VP__Control" Margin="106,-2,-212,0" Background="#FFF18030">
+                <Grid Background="#FFB99999">
+                    <Button Content="Connect" HorizontalAlignment="Left" Height="41" Margin="50,146,0,0" VerticalAlignment="Top" Width="108" FontFamily="Arial" FontWeight="Bold" Click="connectiontest" >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="7"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <DataGrid x:Name="tableloading" HorizontalAlignment="Left" Height="883" Margin="1043,58,0,0" VerticalAlignment="Top" Width="861" />
+                    <Button Content="Loading" HorizontalAlignment="Left" Height="41" Margin="555,286,0,0" VerticalAlignment="Top" Width="108" FontFamily="Arial" FontWeight="Bold" Background="#FF1683E8" Click="loadingimagefolder" >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="7"/>
+
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBox HorizontalAlignment="Left" x:Name="textbox_folderimage" Margin="555,125,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="408" Height="41" FontFamily="Arial" VerticalContentAlignment="Center" Background="#FFBCEDEA"/>
+                    <Button Content="..." HorizontalAlignment="Left" Margin="968,146,0,0" VerticalAlignment="Top" Width="19" Click="openfilelocation">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <TextBox HorizontalAlignment="Left"  x:Name="textbox_folderimage_Copy" Margin="555,182,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="408" Height="41" FontFamily="Arial"  VerticalContentAlignment="Center" Background="#FFBCEDEA"/>
+                    <Button Content="..." HorizontalAlignment="Left" Margin="968,203,0,0" VerticalAlignment="Top" Width="19" Click="openfilerecipe">
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="5"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                    <ComboBox HorizontalAlignment="Left" Height="29" Margin="555,238,0,0" VerticalAlignment="Top" Width="135" HorizontalContentAlignment="Center" VerticalContentAlignment="Center">
+
+                        <ComboBoxItem>JPG</ComboBoxItem>
+                        <ComboBoxItem>BMP</ComboBoxItem>
+                        <ComboBoxItem>JPEG</ComboBoxItem>
+
+                    </ComboBox>
+                    <TextBox x:Name="nameimage" HorizontalAlignment="Left" Margin="730,238,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="227" Height="29" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontFamily="Arial" Text="block_block01_001.jpg"/>
+                    <Button Content="Transparen" HorizontalAlignment="Left" Height="40" Margin="555,460,0,0" VerticalAlignment="Top" Width="137" FontFamily="Arial" FontWeight="Bold" Background="#FFE8D616" Click="transparen" >
+                        <Button.Resources>
+                            <Style TargetType="{x:Type Border}">
+                                <Setter Property="CornerRadius" Value="7"/>
+
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+
+    </Grid>
+</Window>

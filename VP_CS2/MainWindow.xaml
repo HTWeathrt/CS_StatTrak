@@ -1,0 +1,33 @@
+﻿<Window x:Class="VP_CS2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:xrpb="http://XamlRadialProgressBar/DotNet"
+        xmlns:local="clr-namespace:VP_CS2"
+        mc:Ignorable="d"
+        Title="VP_Speedup" Height="335" Width="802" Icon="/Icon/color-wheel.png" 
+        MaxWidth="800" MinWidth="800" MinHeight="335" MaxHeight="335"
+        WindowStyle="None" MouseDown="Window_MouseDown"
+        AllowsTransparency="True"
+        >
+    <Grid Background="#FFBDBABA">
+        <Label Content="Loading ..." Margin="142,104,575,208" FontFamily="Arial"/>
+        <Label Content="Loading ..." Margin="142,203,575,109" FontFamily="Arial"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="201" Margin="13,99,0,0" VerticalAlignment="Top" Width="387"/>
+
+        <Button Content="Button" HorizontalAlignment="Left" Height="51" Margin="686,274,0,0" VerticalAlignment="Top" Width="94" Click="Button_Click"/>
+        <DockPanel HorizontalAlignment="Center" Height="28" LastChildFill="False" VerticalAlignment="Top" Width="800" Background="#FF7D6262">
+            <Image Width="55" Source="/Icon/color-wheel.png"/>
+            <Button Content="" DockPanel.Dock="Right" Width="33" BorderBrush="{x:Null}" Height="28" Click="Button_Click_2">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Icon/power.png" TileMode="FlipY" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock TextWrapping="Wrap" Text="VP_Speed" Width="72" Foreground="White" FontWeight="Bold" FontFamily="Arial" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </DockPanel>
+        <ProgressBar HorizontalAlignment="Left" Height="27" Margin="84,132,0,0" VerticalAlignment="Top" Width="296" Foreground="#FF368DBB" IsIndeterminate="False" BorderBrush="AliceBlue"/>
+        <ProgressBar HorizontalAlignment="Left" Height="27" Margin="84,227,0,0" VerticalAlignment="Top" Width="296" Foreground="#FF3663BB" IsIndeterminate="False" BorderBrush="AliceBlue"/>
+
+    </Grid>
+</Window>
